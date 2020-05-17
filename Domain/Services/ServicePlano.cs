@@ -20,7 +20,7 @@ namespace Domain.Services
                 using (var connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    var query = "UPDATE PLANO SET (@CODIGO, @NOME, @MINUTOS, @FRANQUIA, @VALOR, @TIPO, @DISPONIBILIDADE @ID_OPERADORA) WHERE CODIGO = " + planoId;
+                    var query = "UPDATE PLANO SET (@CODIGO, @NOME, @DDD, @MINUTOS, @FRANQUIA, @VALOR, @TIPO, @DISPONIBILIDADE @ID_OPERADORA) WHERE CODIGO = " + planoId;
                     connection.Execute(query);
                 }
 
@@ -37,17 +37,41 @@ namespace Domain.Services
             using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                var query = "INSERT INTO PLANO VALUES(@CODIGO, @NOME, @MINUTOS, @FRANQUIA, @VALOR, @TIPO, @DISPONIBILIDADE @ID_OPERADORA)";
+                var query = "INSERT INTO PLANO VALUES(@CODIGO, @NOME, @DDD, @MINUTOS, @FRANQUIA, @VALOR, @TIPO, @DISPONIBILIDADE @ID_OPERADORA)";
                 connection.Execute(query);
             }
         }        
 
-        public Plano ObterPlano(int planoId)
+        public Plano ObterPlano(int planoId, int planoDDD)
         {
             using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                var query = "SELECT * FROM PLANO WHERE CODIGO = " + planoId;
+                var query = "SELECT * FROM PLANO WHERE CODIGO = " + planoId + " AND DDD = " + planoDDD + " WHERE DISPONIBILIDADE = 1";
+                var plano = connection.Query<Plano>(query).FirstOrDefault();
+
+                return plano;
+            }
+        }
+
+        public Plano ObterPlanoPorTipo(int planoTipo, int planoDDD)
+        {
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                var query = "SELECT * FROM PLANO WHERE TIPO = " + planoTipo + " AND DDD = " + planoDDD + " WHERE DISPONIBILIDADE = 1";
+                var plano = connection.Query<Plano>(query).FirstOrDefault();
+
+                return plano;
+            }
+        }
+
+        public Plano ObterPlanoPorOperadora(int operadoraID, int planoDDD)
+        {
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                var query = "SELECT * FROM PLANO WHERE ID_OPERADORA = " + operadoraID + " AND DDD = " + planoDDD + " WHERE DISPONIBILIDADE = 1";
                 var plano = connection.Query<Plano>(query).FirstOrDefault();
 
                 return plano;

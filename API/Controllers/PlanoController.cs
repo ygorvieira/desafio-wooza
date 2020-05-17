@@ -19,10 +19,24 @@ namespace API.Controllers
         }
 
         [HttpGet]
-        [Route("GetPlano/ID/{id}/", Name = "Get")]
-        public Plano Get(int id)
+        [Route("GetPlano/ID/{id}/DDD/{ddd}/", Name = "Get")]
+        public Plano Get(int id, int ddd)
         {
-            return _servicePlano.ObterPlano(id);
+            return _servicePlano.ObterPlano(id, ddd);
+        }
+
+        [HttpGet]
+        [Route("GetPlanoPorTipo/TIPO/{tipo}/DDD/{ddd}/", Name = "Get")]
+        public Plano GetPorTipo(int tipo, int ddd)
+        {
+            return _servicePlano.ObterPlanoPorTipo(tipo, ddd);
+        }
+
+        [HttpGet]
+        [Route("GetPlanoPorOperadora/OPERADORA/{operadora}/DDD/{ddd}/", Name = "Get")]
+        public Plano GetPorOperadora(int operadora, int ddd)
+        {
+            return _servicePlano.ObterPlanoPorOperadora(operadora, ddd);
         }
 
         [HttpPost]

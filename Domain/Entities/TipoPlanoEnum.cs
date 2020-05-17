@@ -2,8 +2,8 @@
 {
     public enum TipoPlanoEnum
     {
-        Controle,
-        Pos,
-        Pre
+        Controle = 1,
+        Pos = 2,
+        Pre = 3
     }
 }
