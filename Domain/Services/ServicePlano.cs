@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 using Domain.Repository;
+using Dapper;
+using System.Data.SqlClient;
+using System.Linq;
 
 namespace Domain.Services
 {
@@ -16,17 +19,36 @@ namespace Domain.Services
 
         public void InserirPlano(Plano plano)
         {
-            throw new NotImplementedException();
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                var query = "INSERT INTO PLANO VALUES(@CODIGO, @NOME, @MINUTOS, @FRANQUIA, @VALOR, @TIPO, @DISPONIBILIDADE @ID_OPERADORA)";
+                connection.Execute(query);
+            }
         }
 
         public Plano ObterPlano(int planoId)
         {
-            throw new NotImplementedException();
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                var query = "SELECT * FROM PLANO WHERE CODIGO = " + planoId;
+                var plano = connection.Query<Plano>(query).FirstOrDefault();
+
+                return plano;
+            }
         }
 
         public List<Plano> ObterPlanos()
         {
-            throw new NotImplementedException();
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                var query = "SELECT * FROM PLANO";
+                var lstPlanos = connection.Query<Plano>(query).ToList();
+
+                return lstPlanos;
+            }
         }
 
         public void RemoverPlano(int planoId)
