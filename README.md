@@ -16,7 +16,7 @@ Visual Studio 2017
 
 **GET:** http://localhost:{nº da porta}/api/operadora/GetOperadoras
 
-**GET por ID:** http://localhost:{nº da porta}/api/operadora/GetOperadora/ID/{id}/
+**GET por CODIGO DO PLANO:** http://localhost:{nº da porta}/api/operadora/GetOperadora/ID/{id}/
 
 **POST:**  http://localhost:{nº da porta}/api/operadora/PostOperadora/
 
@@ -28,7 +28,11 @@ Visual Studio 2017
 
 **GET:** http://localhost:{nº da porta}/api/plano/GetPlanos
 
-**GET por ID:** http://localhost:{nº da porta}/api/plano/GetPlano/ID/{id}/
+**GET por ID:** http://localhost:{nº da porta}/api/plano/GetPlano/ID/{id}/DDD/{ddd}/
+
+**GET por TIPO:** http://localhost:{nº da porta}/api/plano/GetPlanoPorTipo/TIPO/{tipo}/DDD/{ddd}/
+
+**GET por OPERADORA:** http://localhost:{nº da porta}/api/plano/GetPlanoPorOperadora/OPERADORA/{operadora}/DDD/{ddd}
 
 **POST:**  http://localhost:{nº da porta}/api/plano/PostPlano/
 
