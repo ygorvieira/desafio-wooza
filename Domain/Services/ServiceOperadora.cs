@@ -12,7 +12,7 @@ namespace Domain.Services
     {
         private string connectionString = "Data Source=DESKTOP-IQVN5PC\\SQLSERVER14;Initial Catalog=DESAFIO_WOOZA;Integrated Security=True;";
 
-        public void AtualizarOperadora(int operadoraId)
+        public int AtualizarOperadora(int operadoraId)
         {
             throw new NotImplementedException();
         }
@@ -51,7 +51,7 @@ namespace Domain.Services
             }
         }
 
-        public void RemoverOperadora(int operadoraId)
+        public int RemoverOperadora(int operadoraId)
         {
             throw new NotImplementedException();
         }

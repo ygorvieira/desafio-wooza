@@ -19,3 +19,5 @@ C:\Users\Ygor Vieira\Documents\PROJETOS\desafio Wooza\Tests\obj\Debug\netcoreapp
 C:\Users\Ygor Vieira\Documents\PROJETOS\desafio Wooza\Tests\obj\Debug\netcoreapp2.2\Tests.pdb
 C:\Users\Ygor Vieira\Documents\PROJETOS\desafio Wooza\Tests\bin\Debug\netcoreapp2.2\System.Data.SqlClient.dll
 C:\Users\Ygor Vieira\Documents\PROJETOS\desafio Wooza\Tests\bin\Debug\netcoreapp2.2\System.Data.SqlClient.xml
+C:\Users\Ygor Vieira\Documents\PROJETOS\desafio Wooza\Tests\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.Core.dll
+C:\Users\Ygor Vieira\Documents\PROJETOS\desafio Wooza\Tests\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.Core.xml

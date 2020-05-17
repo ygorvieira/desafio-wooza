@@ -9,7 +9,7 @@ namespace Domain.Repository
         List<Operadora> ObterOperadoras();
         Operadora ObterOperadora(int operadoraId);
         void InserirOperadora(Operadora operadora);
-        void RemoverOperadora(int operadoraId);
-        void AtualizarOperadora(int operadoraId);
+        int RemoverOperadora(int operadoraId);
+        int AtualizarOperadora(int operadoraId);
     }
 }
