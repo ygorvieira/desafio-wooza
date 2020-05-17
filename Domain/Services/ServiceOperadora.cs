@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
-using System.Text;
+
 using Dapper;
+
 using Domain.Repository;
 
 namespace Domain.Services
@@ -14,7 +15,21 @@ namespace Domain.Services
 
         public int AtualizarOperadora(int operadoraId)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (var connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    var query = "UPDATE OPERADORA SET (@ID, @NOME) WHERE ID = " + operadoraId;
+                    connection.Execute(query);
+                }
+
+                return operadoraId;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
         }
 
         public void InserirOperadora(Operadora operadora)
@@ -32,7 +47,7 @@ namespace Domain.Services
             using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                var query = "SELECT * FROM PLANO WHERE CODIGO = " + operadoraId;
+                var query = "SELECT * FROM OPERADORA WHERE OPERADORA = " + operadoraId;
                 var operadora = connection.Query<Operadora>(query).FirstOrDefault();
 
                 return operadora;
@@ -53,7 +68,21 @@ namespace Domain.Services
 
         public int RemoverOperadora(int operadoraId)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (var connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    var query = "DELETE FROM OPERADORA WHERE ID = " + operadoraId;
+                    connection.Execute(query);
+                }
+
+                return operadoraId;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
         }
     }
 }

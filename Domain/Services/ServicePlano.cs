@@ -15,7 +15,21 @@ namespace Domain.Services
 
         public int AtualizarPlano(int planoId)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (var connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    var query = "UPDATE PLANO SET (@CODIGO, @NOME, @MINUTOS, @FRANQUIA, @VALOR, @TIPO, @DISPONIBILIDADE @ID_OPERADORA) WHERE CODIGO = " + planoId;
+                    connection.Execute(query);
+                }
+
+                return planoId;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
         }                
 
         public void InserirPlano(Plano plano)
@@ -54,7 +68,21 @@ namespace Domain.Services
 
         public int RemoverPlano(int planoId)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (var connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    var query = "DELETE FROM PLANO WHERE CODIGO = " + planoId;
+                    connection.Execute(query);
+                }
+
+                return planoId;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
         }
     }
 }
