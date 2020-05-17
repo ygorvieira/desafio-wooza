@@ -13,7 +13,7 @@ namespace Domain.Services
     {
         private string connectionString = "Data Source=DESKTOP-IQVN5PC\\SQLSERVER14;Initial Catalog=DESAFIO_WOOZA;Integrated Security=True;";
 
-        public void AtualizarPlano(int planoId)
+        public int AtualizarPlano(int planoId)
         {
             throw new NotImplementedException();
         }                
@@ -52,7 +52,7 @@ namespace Domain.Services
             }
         }        
 
-        public void RemoverPlano(int planoId)
+        public int RemoverPlano(int planoId)
         {
             throw new NotImplementedException();
         }

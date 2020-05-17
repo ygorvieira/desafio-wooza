@@ -7,7 +7,7 @@ namespace Domain.Repository
         List<Plano> ObterPlanos();
         Plano ObterPlano(int planoId);
         void InserirPlano(Plano plano);
-        void RemoverPlano(int planoId);
-        void AtualizarPlano(int planoId);
+        int RemoverPlano(int planoId);
+        int AtualizarPlano(int planoId);
     }
 }

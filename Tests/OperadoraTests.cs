@@ -22,7 +22,7 @@ namespace Tests
         [TestMethod]
         public void DelteDeveFalharSeIdOperadoraDiferente()
         {
-            var valor = Int32.MaxValue;
+            var valor = int.MaxValue;
             var service = new ServiceOperadora();
             var resultado = service.RemoverOperadora(valor);
 
@@ -32,7 +32,7 @@ namespace Tests
         [TestMethod]
         public void PutDeveFalharSeIdDoperadoraDiferente()
         {
-            var valor = Int32.MaxValue;
+            var valor = int.MaxValue;
             var service = new ServiceOperadora();
             var resultado = service.AtualizarOperadora(valor);
 
