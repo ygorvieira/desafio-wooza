@@ -1,0 +1,17 @@
+C:\Users\Ygor Vieira\Documents\PROJETOS\desafio Wooza\API\bin\Debug\netcoreapp2.2\API.deps.json
+C:\Users\Ygor Vieira\Documents\PROJETOS\desafio Wooza\API\bin\Debug\netcoreapp2.2\API.runtimeconfig.json
+C:\Users\Ygor Vieira\Documents\PROJETOS\desafio Wooza\API\bin\Debug\netcoreapp2.2\API.runtimeconfig.dev.json
+C:\Users\Ygor Vieira\Documents\PROJETOS\desafio Wooza\API\bin\Debug\netcoreapp2.2\API.dll
+C:\Users\Ygor Vieira\Documents\PROJETOS\desafio Wooza\API\bin\Debug\netcoreapp2.2\API.pdb
+C:\Users\Ygor Vieira\Documents\PROJETOS\desafio Wooza\API\bin\Debug\netcoreapp2.2\Domain.dll
+C:\Users\Ygor Vieira\Documents\PROJETOS\desafio Wooza\API\bin\Debug\netcoreapp2.2\Domain.pdb
+C:\Users\Ygor Vieira\Documents\PROJETOS\desafio Wooza\API\obj\Debug\netcoreapp2.2\API.csprojAssemblyReference.cache
+C:\Users\Ygor Vieira\Documents\PROJETOS\desafio Wooza\API\obj\Debug\netcoreapp2.2\API.csproj.CoreCompileInputs.cache
+C:\Users\Ygor Vieira\Documents\PROJETOS\desafio Wooza\API\obj\Debug\netcoreapp2.2\API.RazorAssemblyInfo.cache
+C:\Users\Ygor Vieira\Documents\PROJETOS\desafio Wooza\API\obj\Debug\netcoreapp2.2\API.RazorAssemblyInfo.cs
+C:\Users\Ygor Vieira\Documents\PROJETOS\desafio Wooza\API\obj\Debug\netcoreapp2.2\API.AssemblyInfoInputs.cache
+C:\Users\Ygor Vieira\Documents\PROJETOS\desafio Wooza\API\obj\Debug\netcoreapp2.2\API.AssemblyInfo.cs
+C:\Users\Ygor Vieira\Documents\PROJETOS\desafio Wooza\API\obj\Debug\netcoreapp2.2\API.RazorTargetAssemblyInfo.cache
+C:\Users\Ygor Vieira\Documents\PROJETOS\desafio Wooza\API\obj\Debug\netcoreapp2.2\API.csproj.CopyComplete
+C:\Users\Ygor Vieira\Documents\PROJETOS\desafio Wooza\API\obj\Debug\netcoreapp2.2\API.dll
+C:\Users\Ygor Vieira\Documents\PROJETOS\desafio Wooza\API\obj\Debug\netcoreapp2.2\API.pdb
